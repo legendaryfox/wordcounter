@@ -1,0 +1,25 @@
+<h1>Word Counter</h1>
+<p>Enter in a bit of text, and we'll count the words out for you.</p>
+
+
+
+
+
+<%= form_for @document, :url => wordcount_documents_path(@document), :method => :post do |document_form| %>
+	<%= document_form.text_area :content %>
+	<%= document_form.submit %>
+<% end %>
+<br /><br />
+
+<br /><br />
+<table>
+
+<% @count_results.each do |word_result| %>
+
+	<tr>
+		<td><%= word_result[1] %></td>
+		<td><%= word_result[0] %><td>
+	</tr>
+<% end %>
+</table>
+

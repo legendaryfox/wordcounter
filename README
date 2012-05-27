@@ -1,3 +1,13 @@
+
+
+<%= form_tag wordcount_documents_path, :method => :get do %>
+	<p>
+		<%= text_area_tag :content, @document.content, :class => "xlInput" %>
+		<%= submit_tag "Count Words!", :name => nil, :class => "btn primary" %>
+	</p>
+<% end %>
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
